@@ -581,6 +581,11 @@ dist
 
 EOF
 }
+readme() {
+  echo 'O arquivo `script.sh` cria a árvore de diretórios e arquivos utilidados em projetos tailwindcss cujo auto utiliza. 
+
+O arquivo `compiler.sh` compila o arquivo de saída css gerado pelo tailwind.config.css'
+}
 
 node init
 npm init -y
@@ -598,5 +603,7 @@ mv *.json ./src/json
 license > LICENCE
 touch README.md
 get_gitignore_content > .gitignore
+readme > README.txt
+mv README.txt ./docs && mv *.sh ./docs
 
-npx tailwindcss -i ./src/css/base.css -o ./src/css/tailwind.css --watch
+

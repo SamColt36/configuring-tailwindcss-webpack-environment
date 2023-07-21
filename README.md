@@ -29,6 +29,8 @@ Esse script Bash simplifica a criação de arquivos essenciais como `base.css`, 
 3.  Dê permissão de execução ao script `script.sh` com o comando: `chmod +x script.sh`.
 4.  Execute o script com o comando: `./script.sh`.
 5.  O script criará a estrutura de diretórios e os arquivos necessários para o projeto.
+6.  Depois que a árvore estiver estruturada os arquivos `.sh` e `README.txt` serão movidos para o diretório /docs.
+7.  Para compilar o arquivo `tailwind.config.js` execute o script `compiler.sh` com o comando: `./docs/./compiler.sh`
 
 ## 🚀 Tecnologias
 
