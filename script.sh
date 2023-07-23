@@ -26,6 +26,7 @@ indexHtml() {
 
 <body>
 
+  <script src="main.js"></script>
 </body>
 
 </html>'
@@ -593,7 +594,7 @@ npm install -D tailwindcss
 tailwindConfig > tailwind.config.js
 mkdir docs/ src/ && cd src/
 mkdir assets/ js/ json/ css/ html/ && cd js/
-touch script.js && cd ../css
+touch main.js && cd ../css
 baseCss > base.css
 outputCss > output.css
 touch style.css
