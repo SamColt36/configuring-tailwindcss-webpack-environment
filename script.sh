@@ -13,11 +13,14 @@ indexHtml() {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Sam Colt">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
+	<meta name="description" content="Uma descrição concisa do conteúdo da página para mecanismos de busca.">
+	<meta name="keywords" content="HTML, CSS, SEO">
 	<meta http-equiv="Content-Language" content="pt-BR">
 	<meta name="robots" content="index, follow">
-	<link rel="canonical" href="">
+  <meta property="og:title" content="Título para Redes Sociais">
+  <meta property="og:description" content="Descrição para Redes Sociais">
+  <meta property="og:image" content="https://www.exemplo.com/imagem.png">
+	<link rel="canonical" href="https://www.exemplo.com">
 	<link rel="stylesheet" href="./src/css/output.css">
 	<title></title>
 	<link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="96x96">
@@ -63,26 +66,26 @@ module.exports = {
 license() {
   echo 'MIT License
 
-Copyright (c) 2023 Samuel
+  Copyright (c) 2023 Samuel
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-'
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+  '
 }
 get_gitignore_content() {
     cat << EOF
@@ -587,7 +590,9 @@ readme() {
 
 O arquivo `compiler.sh` compila o arquivo de saída css gerado pelo tailwind.config.js'
 }
-
+compiler() {
+  echo 'npx tailwindcss -i ./src/css/base.css -o ./src/css/tailwind.css --watch'
+}
 node init
 npm init -y
 npm install -D tailwindcss
@@ -605,6 +610,8 @@ license > LICENCE
 touch README.md
 get_gitignore_content > .gitignore
 readme > README.txt
-mv README.txt ./docs && mv *.sh ./docs
+compiler > compiler.sh
+mv README.txt ./docs 
+rm -r script.sh
 
 
