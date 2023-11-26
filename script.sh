@@ -5,31 +5,42 @@ baseCss() {
 }
 
 indexHtml() {
-    echo '<!DOCTYPE html>
+    echo '
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Sam Colt">
-	<meta name="description" content="Uma descrição concisa do conteúdo da página para mecanismos de busca.">
-	<meta name="keywords" content="HTML, CSS, SEO">
-	<meta http-equiv="Content-Language" content="pt-BR">
-	<meta name="robots" content="index, follow">
-  <meta property="og:title" content="Título para Redes Sociais">
-  <meta property="og:description" content="Descrição para Redes Sociais">
-  <meta property="og:image" content="https://www.exemplo.com/imagem.png">
-	<link rel="canonical" href="https://www.exemplo.com">
-	<link rel="stylesheet" href="./src/css/output.css">
-	<title></title>
-	<link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="96x96">
-	<link rel="icon" type="image/png" href="favicon.svg" sizes="96x96">
+<!-- Lembrar de preencher os campos content -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="Adicionar descrição" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="author" content="Samuel da Silva" />
+	<meta property="og:title" content="Nome da Aplicação" />
+	<meta property="og:description" content="Confira meu ..." />
+	<meta property="og:image" content="./favicon.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Título da Aplicação para compartilhamento no twitter" />
+	<meta name="twitter:description" content="Confira meu ..." />
+	<meta name="twitter:image" content="./favicon.png" />
+	<meta name="robots" content="index, follow" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Adicionar link da página no href abaixo, como url canonical -->
+	<link rel="canonical" href="" />
+	<link rel="stylesheet" href="./styles/output.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon.png">
+	<link rel="manifest" href="./favicon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon.png">
+	<link rel="shortcut icon" href="./favicon.ico">
+	<title>Adicionar Título</title>
 </head>
 
 <body>
-
-  <script src="main.js"></script>
+  <script type="module" src="./scripts/dom.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>'
@@ -63,6 +74,7 @@ module.exports = {
   plugins: [],
 }'
 }
+
 license() {
   echo 'MIT License
 
@@ -87,6 +99,7 @@ license() {
   SOFTWARE.
   '
 }
+
 get_gitignore_content() {
     cat << EOF
 ## Ignore Visual Studio temporary files, build results, and
@@ -585,33 +598,30 @@ dist
 
 EOF
 }
-readme() {
-  echo 'O arquivo `script.sh` cria a árvore de diretórios e arquivos utilidados em projetos tailwindcss cujo auto utiliza. 
-
-O arquivo `compiler.sh` compila o arquivo de saída css gerado pelo tailwind.config.js'
-}
 compiler() {
-  echo 'npx tailwindcss -i ./src/css/base.css -o ./src/css/tailwind.css --watch'
+  echo 'npx tailwindcss -i ./styles/base.css -o ./styles/tailwind.css --watch'
 }
 node init
 npm init -y
+mkdir public
+cd public
 npm install -D tailwindcss
 tailwindConfig > tailwind.config.js
-mkdir docs/ src/ && cd src/
-mkdir assets/ js/ json/ css/ html/ && cd js/
-touch main.js && cd ../css
+mkdir data/ docs/ fonts/ images/ scripts/ styles/ svg/
+cd scripts/ 
+touch main.js dom.js 
+cd ../styles
 baseCss > base.css
 outputCss > output.css
 touch style.css
-cd ../../
+cd ..
 indexHtml > index.html
-mv *.json ./src/json
 license > LICENCE
 touch README.md
 get_gitignore_content > .gitignore
-readme > README.txt
 compiler > compiler.sh
-mv README.txt ./docs 
-rm -r script.sh
+cd ..
+mv README.txt ./public/docs 
+mv script.sh ./public/docs
 
 
