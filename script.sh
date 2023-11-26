@@ -605,6 +605,8 @@ node init
 npm init -y
 mkdir public
 cd public
+compiler > compiler.sh
+indexHtml > index.html
 npm install -D tailwindcss
 tailwindConfig > tailwind.config.js
 mkdir data/ docs/ fonts/ images/ scripts/ styles/ svg/
@@ -614,13 +616,10 @@ cd ../styles
 baseCss > base.css
 outputCss > output.css
 touch style.css
-cd ..
-indexHtml > index.html
+cd ../../
 license > LICENCE
-touch README.md
 get_gitignore_content > .gitignore
-compiler > compiler.sh
-cd ..
+touch README.md
 mv README.txt ./public/docs 
 mv script.sh ./public/docs
 
