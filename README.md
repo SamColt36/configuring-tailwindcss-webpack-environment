@@ -1,47 +1,101 @@
 
-# Projeto de Otimização de Projetos Tailwind CSS 🚀
+# 🚀 Configurando ambiente tailwindcss/webpack
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)![](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white
+)![](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
 
-Este repositório é dedicado a um script em Bash desenvolvido para otimizar projetos que utilizam o Tailwind CSS. O objetivo do script é automatizar a configuração inicial do projeto e facilitar o processo de criação de arquivos necessários para o uso eficiente do Tailwind CSS.
+## 🌐 Visão Geral
 
-## 📋 Descrição
+Cria uma estrutura de diretórios e arquivos para um projeto básico usando *Webpack* com utilização do *tailwindcss*.
 
-O Tailwind CSS é um framework CSS altamente personalizável e de baixo nível, que permite criar designs exclusivos e responsivos de maneira rápida e eficiente. Porém, configurar e organizar um projeto pode ser um processo repetitivo e demorado.
+## 📁 Clonar repositório
 
-Esse script Bash simplifica a criação de arquivos essenciais como `base.css`, `output.css` e `tailwind.config.js`, além de gerar um arquivo `index.html` básico com as importações necessárias para o CSS gerado.
+Clone este repositório via Bash, usando:
 
-## 📂 Estrutura do Projeto
+✅ HTTPS:
 
--   `base.css`: Arquivo contendo configurações de estilo base do tailwindcss para o projeto.
--   `output.css`: Arquivo de saída gerado com imports de outros arquivos externos. Apenas para organização.
--   `tailwind.config.js`: Arquivo de configuração do Tailwind CSS.
--   `index.html`: Página principal.
--   `src/`: Diretório para organização dos arquivos do projeto.
--   `src/assets/`: Diretório para armazenar recursos como imagens e fontes.
--   `src/js/`: Diretório para os arquivos JavaScript.
--   `src/json/`: Diretório para arquivos JSON.
--   `src/css/`: Diretório para arquivos CSS.
--   `src/html/`: Diretório para arquivos HTML de páginas secundárias. Lembrando que o index.html tem que estar na raiz do projeto para que o Github Pages funcione adequadamente.
+```bash
+git clone https://github.com/SamColt36/configurando-ambiente-tailwindcss```
 
-## ▶️ Como Usar
+✅ SSH:
 
-1.  Faça o download deste repositório ou clone-o para sua máquina local.
-2.  No terminal, navegue até o diretório raiz do projeto.
-3.  Dê permissão de execução ao script `script.sh` com o comando: `chmod +x script.sh`.
-4.  Execute o script com o comando: `./script.sh`.
-5.  O script criará a estrutura de diretórios e os arquivos necessários para o projeto.
-6.  Depois que a árvore estiver estruturada os arquivos `.sh` e `README.txt` serão movidos para o diretório /docs.
-7.  Para compilar o arquivo `tailwind.config.js` execute o script `compiler.sh` com o comando: `./docs/./compiler.sh`
+```bash
+git clone git@github.com:SamColt36/configurando-ambiente-tailwindcss
+```
 
-## 🚀 Tecnologias
+✅ GitHub CLI:
 
--   Bash: Linguagem de script utilizada para criar o script de otimização.
+```bash
+gh repo clone SamColt36/configurando-ambiente-tailwindcss
+```
 
-## ✨ Contribuições
+✅ Download ZIP.
 
-Contribuições são bem-vindas! Se você tiver alguma ideia para melhorar este projeto ou encontrar algum problema, sinta-se à vontade para abrir uma "issue" ou enviar um "pull request".
+## 📶 Status
 
-Esperamos que este script facilite a otimização de projetos com o Tailwind CSS, tornando o desenvolvimento ainda mais produtivo e eficiente. 😊
+O projeto encontra-se em:
 
-Tenho que deixar claro que o objetivo mestre desse script é otimizar o coding usando uma estrutura de arquivos e diretórios pessoal, em outras palavras: é assim que eu uso ao construir páginas usando tailwindcss.
+> Finalizado, mas sempre em melhoria
 
-Aproveite o projeto e deixe-nos saber suas opiniões! 🌟
+## 📂 Estrutura de diretórios
+
+Foi pensada uma estrutura que segue o seguinte diagrama. Os arquivos compilados por padrão vão para o diretório `docs/`.
+
+    -docs/
+    ---images/
+    -src/
+    ---pages/
+    ---styles/
+    ---scripts/
+    -*.config.js
+    -README.md
+    -LICENSE
+    -.gitignore
+
+## 🔧 Instalação
+
+O projeto utiliza o _webpack_ como empacotador de códigos. O _Webpack_ nada mais é do que um empacotador de módulos/códigos. Seu grande diferencial é que ele foi criado para juntar arquivos de JavaScript que são utilizados dentro de um navegador. Sua principal utilidade é para projetos voltados para web focados em módulos de sua aplicação.
+
+Para fazer a instalação das dependências usadas nesse projeto, tais como: _webpack_ e o _tailwindcss_, é necessário ter o NodeJS instalado. Até a data atual, esse último pode ser obtido através do link:
+
+> [Node.js — Download Node.js® (nodejs.org)](https://nodejs.org/en/download)
+
+<img title="a Node" alt="Banner NodeJs" src="./docs/images/node-banner.png"
+style="max-width: 600px">
+
+Para obter as referências das dependências usadas o arquivo _package.json_ pode ser usado, e para mais detalhes use o _package-lock.json_, ambos na raiz do projeto.
+
+_Foi usada a sintaxe do CJS nos quando aos arquivos de configuração._
+
+## 🛠️ Abrir e rodar
+
+Após as devidas instalações e configurações presentes nos arquivos `*.config.js`, caso queira alterar o projeto é necessário recompilar os arquivos para gerar uma nova saída (por _default_ no diretório `docs/`). Pensando nisso, o arquivo _package.json_ conta com dois _scripts_:
+
+```json
+"scripts": {
+	"build": "webpack --config webpack.config.js",
+	"watch": "webpack --watch"
+},
+```
+
+- **build**: Apenas compila e gera as saídas
+- **watch**: Assiste as mudanças no código e compila.
+
+Por fim e não menos importante, rode no terminal um desses dois _scripts_ usando:
+
+```bash
+$ npm run build
+```
+
+ou
+
+```bash
+$ npm run watch
+```
+
+## 👥 Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou relatar problemas.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE ou acesse [MIT License (mit-license.org)](https://mit-license.org/) para obter detalhes.
