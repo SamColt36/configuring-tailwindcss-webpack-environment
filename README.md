@@ -14,7 +14,9 @@ Clone este repositório via Bash, usando:
 ✅ HTTPS:
 
 ```bash
-git clone https://github.com/SamColt36/configurando-ambiente-tailwindcss```
+git clone https://github.com/SamColt36/configurando-ambiente-tailwindcss
+```
+
 
 ✅ SSH:
 
@@ -58,9 +60,6 @@ O projeto utiliza o _webpack_ como empacotador de códigos. O _Webpack_ nada mai
 Para fazer a instalação das dependências usadas nesse projeto, tais como: _webpack_ e o _tailwindcss_, é necessário ter o NodeJS instalado. Até a data atual, esse último pode ser obtido através do link:
 
 > [Node.js — Download Node.js® (nodejs.org)](https://nodejs.org/en/download)
-
-<img title="a Node" alt="Banner NodeJs" src="./docs/images/node-banner.png"
-style="max-width: 600px">
 
 Para obter as referências das dependências usadas o arquivo _package.json_ pode ser usado, e para mais detalhes use o _package-lock.json_, ambos na raiz do projeto.
 
