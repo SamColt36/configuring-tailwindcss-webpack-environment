@@ -14,44 +14,41 @@ Clone este repositório via Bash, usando:
 ✅ HTTPS:
 
 ```bash
-git clone https://github.com/SamColt36/configurando-ambiente-tailwindcss
+git clone https://github.com/SamColt36/configuring-tailwindcss-webpack-environment
 ```
-
 
 ✅ SSH:
 
 ```bash
-git clone git@github.com:SamColt36/configurando-ambiente-tailwindcss
+git clone git@github.com:SamColt36/configuring-tailwindcss-webpack-environment
 ```
 
 ✅ GitHub CLI:
 
 ```bash
-gh repo clone SamColt36/configurando-ambiente-tailwindcss
+gh repo clone SamColt36/configuring-tailwindcss-webpack-environment
 ```
-
-✅ Download ZIP.
 
 ## 📶 Status
 
-O projeto encontra-se em:
+O projeto encontra-se na situação:
 
-> Finalizado, mas sempre em melhoria
+> Finalizado.
 
 ## 📂 Estrutura de diretórios
 
 Foi pensada uma estrutura que segue o seguinte diagrama. Os arquivos compilados por padrão vão para o diretório `docs/`.
 
-    -docs/
-    ---images/
-    -src/
-    ---pages/
-    ---styles/
-    ---scripts/
-    -*.config.js
-    -README.md
-    -LICENSE
-    -.gitignore
+    |-docs/
+    |---images/
+    |-src/
+    |---pages/
+    |---styles/
+    |---scripts/
+    |-*.config.js
+    |-README.md
+    |-LICENSE
+    |-.gitignore
 
 ## 🔧 Instalação
 
