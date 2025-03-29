@@ -1,24 +1,23 @@
+# 🚀 Setting up a TailwindCSS/Webpack Environment
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+![](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
 
-# 🚀 Configurando ambiente tailwindcss/webpack
-![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)![](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white
-)![](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
+## 🌐 Overview
 
-## 🌐 Visão Geral
+Creates a directory and file structure for a basic project using *Webpack* with *TailwindCSS*.
 
-Cria uma estrutura de diretórios e arquivos para um projeto básico usando *Webpack* com utilização do *tailwindcss*.
+## 📁 Clone Repository
 
-## 📁 Clonar repositório
-
-Clone este repositório via Bash, usando:
+Clone this repository via Bash using:
 
 ✅ HTTPS:
 
 ```bash
 git clone https://github.com/SamColt36/configuring-tailwindcss-webpack-environment
-```
+``` 
 
 ✅ SSH:
-
 ```bash
 git clone git@github.com:SamColt36/configuring-tailwindcss-webpack-environment
 ```
@@ -31,13 +30,13 @@ gh repo clone SamColt36/configuring-tailwindcss-webpack-environment
 
 ## 📶 Status
 
-O projeto encontra-se na situação:
+The project is currently:
 
-> Finalizado.
+> Completed.
 
-## 📂 Estrutura de diretórios
+## 📂 Directory Structure
 
-Foi pensada uma estrutura que segue o seguinte diagrama. Os arquivos compilados por padrão vão para o diretório `docs/`.
+The following directory structure was designed. Compiled files are output to the docs/ directory by default.
 
     |-docs/
     |---images/
@@ -50,21 +49,21 @@ Foi pensada uma estrutura que segue o seguinte diagrama. Os arquivos compilados 
     |-LICENSE
     |-.gitignore
 
-## 🔧 Instalação
+## 🔧 Installation
 
-O projeto utiliza o _webpack_ como empacotador de códigos. O _Webpack_ nada mais é do que um empacotador de módulos/códigos. Seu grande diferencial é que ele foi criado para juntar arquivos de JavaScript que são utilizados dentro de um navegador. Sua principal utilidade é para projetos voltados para web focados em módulos de sua aplicação.
+The project uses webpack as a code bundler. Webpack is essentially a module/code bundler. Its main differentiator is that it was created to bundle JavaScript files for browser use. Its primary utility is for web projects focused on application modules.
 
-Para fazer a instalação das dependências usadas nesse projeto, tais como: _webpack_ e o _tailwindcss_, é necessário ter o NodeJS instalado. Até a data atual, esse último pode ser obtido através do link:
+To install the dependencies used in this project (such as webpack and tailwindcss), you'll need to have NodeJS installed. As of the current date, it can be downloaded at:
 
 > [Node.js — Download Node.js® (nodejs.org)](https://nodejs.org/en/download)
 
-Para obter as referências das dependências usadas o arquivo _package.json_ pode ser usado, e para mais detalhes use o _package-lock.json_, ambos na raiz do projeto.
+The package.json file can be used to reference the dependencies, and for more details, use package-lock.json, both located in the project root.
 
-_Foi usada a sintaxe do CJS nos quando aos arquivos de configuração._
+_CJS syntax was used in the configuration files._
 
-## 🛠️ Abrir e rodar
+## 🛠️ Running the Project
 
-Após as devidas instalações e configurações presentes nos arquivos `*.config.js`, caso queira alterar o projeto é necessário recompilar os arquivos para gerar uma nova saída (por _default_ no diretório `docs/`). Pensando nisso, o arquivo _package.json_ conta com dois _scripts_:
+ApAfter completing the installations and configurations present in the *.config.js* files, if you want to modify the project, you'll need to recompile the files to generate new output (by default in the *docs/* directory). With this in mind, the package.json file includes two scripts:
 
 ```json
 "scripts": {
@@ -73,25 +72,25 @@ Após as devidas instalações e configurações presentes nos arquivos `*.confi
 },
 ```
 
-- **build**: Apenas compila e gera as saídas
-- **watch**: Assiste as mudanças no código e compila.
+- **build**: Compiles and generates output;
+- **watch**: Watches for code changes and compiles.
 
-Por fim e não menos importante, rode no terminal um desses dois _scripts_ usando:
+Finally, run one of these two scripts in the terminal using:
 
 ```bash
 $ npm run build
 ```
 
-ou
+or	
 
 ```bash
 $ npm run watch
 ```
 
-## 👥 Contribuições
+## 👥 Contributions
 
-Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou relatar problemas.
+Contributions are welcome! Feel free to submit pull requests or report issues.
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE ou acesse [MIT License (mit-license.org)](https://mit-license.org/) para obter detalhes.
+This project is licensed under the MIT License. See the LICENSE file or visit [MIT License (mit-license.org)](https://mit-license.org/) for details.
